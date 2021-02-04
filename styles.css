@@ -37,6 +37,10 @@ body {
 
     margin: auto;
 }
+
+img {
+    cursor: pointer;
+}
 /* ---------Titles----------*/
 h2 {
     margin-top: 3.2rem;
