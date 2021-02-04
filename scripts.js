@@ -97,7 +97,7 @@ const DOM = {
             <td class="${CSSclass}">${amount}</td>
             <td class="date">${transaction.date}</td>
             <td>
-                <img onclik="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover Transação">
+                <img onclick="Transaction.remove(${index})" src="./assets/minus.svg" alt="Remover Transação">
             </td>
         `
         return html
@@ -122,9 +122,12 @@ const DOM = {
 
 const Utils  = {
     formatAmount(value) {
-        value = Number(value) * 100
+/*         value = Number(value) * 100
         
-        return value
+        return value */
+
+        value = value * 100
+        return Math.round(value)
     },
     formatDate(date) {
         const splitedDate = date.split("-")
